@@ -3,7 +3,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime, timedelta
 
-# --- Configuração de Teste ---
+# Configuração de Teste
 HOME_DIR = Path.home()
 TEST_BASE_DIR = HOME_DIR / "ambiente_de_teste_automação"
 

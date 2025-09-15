@@ -4,17 +4,17 @@ from datetime import datetime, timedelta
 import os
 import shutil
 
-# Define o diretório base para todos os nossos testes.
+# Define o diretório base para todos os testes.
 TEST_BASE_DIR = Path.home() / "ambiente_de_teste_automação"
 
-# Define os diretórios específicos que nosso script principal vai usar.
+# Define os diretórios específicos que o script principal vai usar.
 SOURCE_DIR = TEST_BASE_DIR / "backupsFrom"
 DEST_DIR = TEST_BASE_DIR / "backupsTo"
 
 def criar_estrutura():
     """Cria a estrutura de diretórios necessária para os testes."""
     print(f"Criando estrutura de teste em: {TEST_BASE_DIR}")
-    # A mágica está no 'parents=True', que cria os diretórios-pai se necessário.
+    # parents=True cria os diretórios-pai se necessário.
     SOURCE_DIR.mkdir(parents=True, exist_ok=True)
     DEST_DIR.mkdir(parents=True, exist_ok=True)
     print("-> Estrutura criada com sucesso.")
