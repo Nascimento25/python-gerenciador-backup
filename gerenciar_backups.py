@@ -43,9 +43,9 @@ def main():
                 )
                 from_log_entries.append(log_entry)
 
-                if creation_time < time_threshold:
-                    print(f"  -> Removendo arquivo antigo: {file_name}")
-                    file_path.unlink()
+                if mod_time < time_threshold:
+                      print(f"   -> Removendo arquivo antigo (baseado em mtime): {file_name}")
+                      file_path.unlink()
                 else:
                     print(f"  -> Copiando arquivo recente: {file_name} para {DEST_DIR}")
                     shutil.copy2(file_path, DEST_DIR)
